@@ -1,0 +1,157 @@
+body {
+	margin-top: 50px; /* 50px is the height of the navbar - change this if the navbarn height changes */
+}
+
+.navbar-nav > li > a {
+  position: relative;
+  padding: 10px 15px;
+  display: inline-block;
+  transform-origin: center bottom; /* prevents misalignment on scale */
+  transition: transform 0.2s ease;
+}
+
+.navbar-nav > li > a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: currentColor;
+  opacity: 0;                          /* hides tiny pixel leftovers */
+  transition: width 0.25s ease, opacity 0.15s ease;
+}
+
+.navbar-nav > li > a:hover {
+  transform: scale(1.12);
+}
+
+.navbar-nav > li > a:hover::after {
+  width: 60%;
+  opacity: 1;
+}
+
+.header-image {
+	background: white;/* Use a tiling background image or a full width image - if you're using full width you will need to change no-repeat center center cover  */
+	background-position: top;
+	height: auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.headline {
+	padding: 40px 0;
+}
+
+.headline > .container > h1 {
+	font-size: 100px;
+	background: #fffff;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.headline > .container > h2 {
+	font-size: 72px;
+	background: #ffffff;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.featurette-divider {
+	margin: 70px 0;
+}
+.featurette {
+	overflow: hidden;
+}
+
+.featurette-image.pull-left {
+	margin-right: 40px;
+}
+.featurette-image.pull-right {
+	margin-left: 40px;
+}
+
+.featurette-heading {
+	font-size: 30px;
+}
+
+footer {
+	margin: 50px 0;
+}
+
+/* RESPONSIVE CSS */
+
+@media (max-width: 1200px) {
+
+.headline > .container > h1 {font-size: 140px;}
+.headline > .container > h2 {font-size: 63px;}
+.featurette-divider {margin: 50px 0;}
+.featurette-image.pull-left {margin-right: 20px;}
+.featurette-image.pull-right {margin-left: 20px;}
+.featurette-heading {font-size: 35px;}
+
+}
+
+@media (max-width: 991px) {
+
+.headline > .container > h1 {font-size: 105px;}
+.headline > .container > h2 {font-size: 50px;}
+.featurette-divider {margin: 40px 0;}
+.featurette-image {max-width: 50%;}
+.featurette-image.pull-left {margin-right: 10px;}
+.featurette-image.pull-right {margin-left: 10px;}
+.featurette-heading {font-size: 30px;}
+
+}
+
+@media (max-width: 768px) {
+
+.container {margin: 0 15px;}
+.featurette-divider {margin: 40px 0;}
+.featurette-heading {font-size: 25px;}
+
+}
+
+
+@media (max-width: 668px) {
+
+.headline > .container > h1 {font-size: 70px;}
+.headline > .container > h2 {font-size: 32px;}
+.featurette-divider {margin: 30px 0;}
+
+}
+
+@media (max-width: 640px) {
+
+.headline {padding: 75px 0 25px 0;}
+.headline > .container > h1 {font-size: 60px;}
+.headline > .container > h2 {font-size: 30px;}
+
+}
+
+@media (max-width: 375px) {
+
+.featurette-divider {margin: 10px 0;}
+.featurette-image {max-width: 100%;}
+.featurette-image.pull-left {margin-right: 0; margin-bottom: 10px;}
+.featurette-image.pull-right {margin-left: 0; margin-bottom: 10px;}
+
+}
+
+.img-responsive {
+	max-width: 40%;
+}
+
+.text-images {
+	height: 0.9em;
+	width: auto;
+}
+
+td {
+	padding-right: 5px;
+}
+
+.time-column {
+	width: 30%;
+	font-size: 0.9em;
+}
