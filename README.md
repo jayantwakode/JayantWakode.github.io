@@ -1,6 +1,6 @@
 # Jayant's Website
 
-You can view it [here](jayantwakode.github.io).
+You can view it [here](jayantwakode.github.io/JayantWakode).
 
 ## References
 
